@@ -1,0 +1,43 @@
+{
+  "name": "nodify-core",
+  "version": "0.0.0",
+  "description": "Nodify is a build tool system for Node.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrynx/nodify.git"
+  },
+  "keywords": [
+    "node build tool",
+    "node es6",
+    "node rollup",
+    "node babel"
+  ],
+  "author": "Shriyans Bhatnagar <shriyansbhatnar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shrynx/nodify/issues"
+  },
+  "homepage": "https://github.com/shrynx/nodify#readme",
+  "bin": {
+    "nodify": "./bin/nodify.js"
+  },
+  "dependencies": {
+    "@yelo/rollup-node-external": "^1.0.1",
+    "ansi-escapes": "^3.0.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-nodify": "*",
+    "chalk": "^2.3.0",
+    "cross-spawn": "^5.1.0",
+    "date-time": "^2.1.0",
+    "nodemon": "^1.12.1",
+    "pretty-ms": "^3.0.1",
+    "ramda": "^0.25.0",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.5",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "signal-exit": "^3.0.2"
+  }
+}
