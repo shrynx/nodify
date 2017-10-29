@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "clean": "lerna clean",
+    "postinstall": "lerna bootstrap",
+    "publish": "lerna publish -m 'chore(release): publish'",
+    "format": "prettier-eslint --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js'",
+    "precommit": "lint-staged",
+    "commit": "git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "format",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.10.0",
+    "husky": "^0.14.3",
+    "lerna": "^2.4.0",
+    "lint-staged": "^4.3.0",
+    "prettier-eslint-cli": "^4.4.0"
+  }
+}

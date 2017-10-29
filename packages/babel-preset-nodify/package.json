@@ -1,0 +1,32 @@
+{
+  "name": "babel-preset-nodify",
+  "version": "0.0.0",
+  "description": "babel config to be used with nodify",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrynx/nodify.git"
+  },
+  "author": "Shriyans Bhatnagar <shriyansbhatnagar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shrynx/nodify/issues"
+  },
+  "homepage": "https://github.com/shrynx/nodify#readme",
+  "keywords": [
+    "babel node",
+    "babel node preset",
+    "nodify",
+    "es6 node"
+  ],
+  "dependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-es2015-parameters": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-runtime": "^6.26.0"
+  }
+}
