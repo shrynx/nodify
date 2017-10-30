@@ -18,7 +18,7 @@ const config = {
   plugins: [
     babel({
       exclude: 'node_modules/**',
-      babelrc: false,
+      babelrc: true,
       presets: basePresets,
     }),
     resolve(),
