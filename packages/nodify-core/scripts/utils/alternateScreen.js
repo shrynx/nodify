@@ -1,7 +1,7 @@
 'use strict';
 
 const ansiEscape = require('ansi-escapes');
-const { stderr } = require('./logging.js');
+const stderr = require('./stderr.js');
 
 const SHOW_ALTERNATE_SCREEN = '\u001B[?1049h';
 const HIDE_ALTERNATE_SCREEN = '\u001B[?1049l';

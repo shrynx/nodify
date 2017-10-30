@@ -1,20 +1,22 @@
 'use strict';
 
 const fs = require('fs');
-const path = require('path');
 const rollup = require('rollup');
 const chalk = require('chalk');
 const ms = require('pretty-ms');
 const onExit = require('signal-exit');
-const dateTime = require('date-time');
 const createConfig = require('./utils/createConfig.js');
 const batchWarnings = require('./utils/batchWarnings.js');
 const alternateScreen = require('./utils/alternateScreen.js');
 const relativeId = require('./utils/relativeId.js');
-const { handleError, stderr } = require('./utils/logging.js');
+const handleError = require('./utils/handleError.js');
+const stderr = require('./utils/stderr.js');
+const clearConsole = require('./utils/clearConsole');
 const startServer = require('./utils/startServer');
 const paths = require('../config/paths');
 const baseConfig = require('../config/rollup.config');
+
+clearConsole();
 
 const isTTY = Boolean(process.stderr.isTTY);
 
@@ -48,32 +50,26 @@ function start() {
       case 'FATAL':
         screen.close();
         handleError(event.error, true);
-        process.exit(1);
+        process.exit();
         break;
 
       case 'ERROR':
+        screen.reset('');
         warnings.flush();
         handleError(event.error, true);
         break;
 
       case 'START':
-        screen.reset(chalk.underline(`rollup v${rollup.VERSION}`));
+        screen.reset('');
         break;
 
       case 'BUNDLE_START':
-        stderr(
-          chalk.cyan(
-            `bundles ${chalk.bold(event.input)} → ${chalk.bold(
-              event.output.map(relativeId).join(', ')
-            )}...`
-          )
-        );
-
+        stderr(chalk.cyan('Preparing bundle ...'));
         break;
 
       case 'BUNDLE_END':
+        screen.reset('');
         warnings.flush();
-        // screen.reset();
         stderr(
           chalk.green(
             `created ${chalk.bold(
@@ -81,14 +77,8 @@ function start() {
             )} in ${chalk.bold(ms(event.duration))}`
           )
         );
+        stderr('');
         startServer(rollupConfig.output[0].file);
-
-        break;
-
-      case 'END':
-        if (isTTY) {
-          stderr(`\n[${dateTime()}] waiting for changes...`);
-        }
         break;
     }
   });

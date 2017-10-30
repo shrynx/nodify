@@ -1,9 +1,8 @@
 'use strict';
 
-const rimraf = require('rimraf');
 const chalk = require('chalk');
-
-const stderr = console.error.bind(console);
+const relativeId = require('./relativeId');
+const stderr = require('./stderr.js');
 
 function handleError(err) {
   let description = err.message || err;
@@ -11,11 +10,9 @@ function handleError(err) {
     description = `${err.name}: ${description}`;
   }
   const message =
-    (err.plugin ? `(${err.plugin} plugin) ${description}` : description) || err;
-
+    (err.plugin ? `(${err.plugin} plugin) \n${description}` : description) || err;
   stderr(chalk.bold.red(`[!] ${chalk.bold(message)}`));
 
-  // TODO should this be "err.url || (err.file && err.loc.file) || err.id"?
   if (err.url) {
     stderr(chalk.cyan(err.url));
   }
@@ -26,16 +23,16 @@ function handleError(err) {
     stderr(relativeId(err.id));
   }
 
-  if (err.frame) {
-    stderr(chalk.dim(err.frame));
-  } else if (err.stack) {
-    stderr(chalk.dim(err.stack));
+  if (err.codeFrame) {
+    stderr('\n');
+    stderr(err.codeFrame);
+    stderr('\n');
   }
 
-  stderr('');
-  process.exit(1);
-  if (!recover) {
-    process.exit(1);
+  if (err.frame) {
+    stderr(chalk.gray(err.frame));
+  } else if (err.stack) {
+    stderr(chalk.gray(err.stack));
   }
 }
 

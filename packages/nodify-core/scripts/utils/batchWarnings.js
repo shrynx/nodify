@@ -1,7 +1,7 @@
 'use strict';
 
 const chalk = require('chalk');
-const { stderr } = require('./logging.js');
+const stderr = require('./stderr.js');
 const relativeId = require('./relativeId.js');
 
 function batchWarnings() {

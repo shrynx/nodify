@@ -13,15 +13,20 @@ const config = {
   output: {
     file: paths.buildPath,
     format: 'cjs',
+    banner: `require('${require
+      .resolve('source-map-support')
+      .indexOf(process.cwd()) === 0
+      ? 'source-map-support/register'
+      : require.resolve('source-map-support/register')}')`,
   },
   sourcemap: true,
   plugins: [
+    resolve(),
     babel({
       exclude: 'node_modules/**',
       babelrc: true,
       presets: basePresets,
     }),
-    resolve(),
     commonjs(),
     json(),
   ],

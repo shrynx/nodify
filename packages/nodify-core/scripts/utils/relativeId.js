@@ -1,6 +1,6 @@
 'use strict';
 
-const { relative } = require('path');
+const path = require('path');
 
 function isAbsolute(path) {
   const absolutePath = /^(?:\/|(?:[A-Za-z]:)?[\\|/])/;
@@ -11,7 +11,7 @@ function relativeId(id) {
   if (typeof process === 'undefined' || !isAbsolute(id)) {
     return id;
   }
-  return relative(process.cwd(), id);
+  return path.relative(process.cwd(), id);
 }
 
 module.exports = relativeId;
