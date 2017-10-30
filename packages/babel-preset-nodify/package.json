@@ -1,6 +1,6 @@
 {
   "name": "babel-preset-nodify",
-  "version": "0.0.0",
+  "version": "2.0.0",
   "description": "babel config to be used with nodify",
   "main": "index.js",
   "repository": {
