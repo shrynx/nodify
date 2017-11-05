@@ -22,7 +22,6 @@
     "nodify": "./bin/nodify.js"
   },
   "dependencies": {
-    "@yelo/rollup-node-external": "^1.0.1",
     "ansi-escapes": "^3.0.0",
     "babel-core": "^6.26.0",
     "babel-preset-nodify": "^2.0.2",
@@ -35,7 +34,6 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-json": "^2.3.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
     "signal-exit": "^3.0.2",
     "source-map-support": "^0.5.0"
   }

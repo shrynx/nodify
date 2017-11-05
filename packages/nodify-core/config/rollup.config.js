@@ -3,8 +3,6 @@
 const babel = require('rollup-plugin-babel');
 const json = require('rollup-plugin-json');
 const commonjs = require('rollup-plugin-commonjs');
-const resolve = require('rollup-plugin-node-resolve');
-const external = require('@yelo/rollup-node-external');
 const paths = require('./paths');
 const basePresets = require('./babel.js');
 
@@ -21,16 +19,14 @@ const config = {
   },
   sourcemap: true,
   plugins: [
-    resolve(),
+    json(),
     babel({
       exclude: 'node_modules/**',
       babelrc: true,
       presets: basePresets,
     }),
     commonjs(),
-    json(),
   ],
-  external: external(),
 };
 
 module.exports = config;

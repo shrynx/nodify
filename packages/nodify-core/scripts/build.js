@@ -10,10 +10,7 @@ const stderr = require('./utils/stderr');
 const createConfig = require('./utils/createConfig');
 const relativeId = require('./utils/relativeId');
 const clearConsole = require('./utils/clearConsole');
-const batchWarnings = require('./utils/batchWarnings.js');
 const baseConfig = require('../config/rollup.config');
-
-const warnings = batchWarnings();
 
 function build() {
   clearConsole();
@@ -35,7 +32,8 @@ function build() {
 
   const start = Date.now();
   const files = outputOptions.map(t => relativeId(t.file));
-  stderr(chalk.cyan(`Creating bundle ...`));
+
+  stderr(chalk.cyan(`Creating bundle ...\n`));
 
   return rollup
     .rollup(inputOptions)
@@ -44,8 +42,6 @@ function build() {
       return bundle.write(output);
     })
     .then(() => {
-      warnings.flush();
-      clearConsole();
       stderr(
         chalk.green(
           `created ${chalk.bold(files.join(', '))} in ${chalk.bold(
