@@ -142,7 +142,7 @@ Your `.babelrc` should look like
 
 ### Inspiration
 
--   [jlongster/backend-with-webpack](http://jlongster.com/Backend-Apps-with-Webpack--Part-I)
+-   [backend-with-webpack](http://jlongster.com/Backend-Apps-with-Webpack--Part-I) by [@jlongster](https://github.com/jlongster)
     for explaing the need of build tools on node backend. 
 
 -   [create-react-app](https://github.com/facebookincubator/create-react-app)
