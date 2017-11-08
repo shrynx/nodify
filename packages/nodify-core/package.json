@@ -30,7 +30,7 @@
     "nodemon": "^1.12.1",
     "pretty-ms": "^3.0.1",
     "ramda": "^0.25.0",
-    "rollup": "^0.50.0",
+    "rollup": "^0.51.1",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-json": "^2.3.0",
