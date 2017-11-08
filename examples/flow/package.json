@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "scripts": {
+    "flow": "flow",
+    "dev": "nodify dev",
+    "build": "nodify build",
+    "start": "npm run build && node ./build/main"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-nodify": "^2.0.2",
+    "flow-bin": "^0.58.0",
+    "nodify-core": "^2.0.0"
+  }
+}

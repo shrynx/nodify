@@ -1,0 +1,8 @@
+{
+  "presets": [
+    "nodify"
+  ],
+  "plugins": [
+    "transform-flow-strip-types"
+  ]
+}

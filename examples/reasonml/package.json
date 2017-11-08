@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nodify dev",
+    "build": "nodify build",
+    "start": "npm run build && node ./build/main"
+  },
+  "devDependencies": {
+    "bs-platform": "^2.0.0",
+    "nodify-core": "^2.0.0",
+    "rollup-plugin-bucklescript": "^0.6.1"
+  }
+}

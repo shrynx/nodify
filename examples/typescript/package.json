@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nodify dev",
+    "build": "nodify build",
+    "start": "npm run build && node ./build/main"
+  },
+  "devDependencies": {
+    "nodify-core": "^2.0.0",
+    "rollup-plugin-typescript": "^0.8.1"
+  }
+}

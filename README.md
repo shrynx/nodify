@@ -134,6 +134,10 @@ Your `.babelrc` should look like
 -   [babel](https://babeljs.io/)
 -   [nodemon](https://nodemon.io/)
 
+## Examples
+
+Please refer the [examples](https://github.com/shrynx/nodify/tree/master/examples) folder for basic setups with different configurations.
+
 ## Acknowledgement
 
 ### Prior Art
