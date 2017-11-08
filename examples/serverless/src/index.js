@@ -1,17 +1,14 @@
-import format from 'date-fns/format';
+import delay from 'delay';
 
-export const hello = (event, context, callback) => {
-  const dateString = format(new Date(), '[Today is a] dddd');
+export const hello = async (event, context, callback) => {
+  await delay(2000);
   const response = {
     statusCode: 200,
     body: JSON.stringify({
-      message: `Your function built using nodify executed successfully! ${dateString}`,
+      message: `Your function built using nodify executed successfully!`,
       input: event,
     }),
   };
 
   callback(null, response);
-
-  // Use this code if you don't use the http event with the LAMBDA-PROXY integration
-  // callback(null, { message: 'Go Serverless v1.0! Your function executed successfully!', event });
 };

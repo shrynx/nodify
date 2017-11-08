@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "nodify",
+    [
+      "env",
+      {
+        "targets": {
+          "node": "6.10"
+        },
+        "modules": false
+      }
+    ]
+  ]
+}

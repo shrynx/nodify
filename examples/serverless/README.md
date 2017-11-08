@@ -27,9 +27,13 @@ npm run dev
 ## Customization
 
 customized `rollup` config to add [rollup-plugin-node-resolve](https://github.com/rollup/rollup-plugin-node-resolve) to bundle node_modules with the build and also added [rollup-plugin-babel-minify](https://github.com/Comandeer/rollup-plugin-babel-minify) so as to reduce the size of the build.
+Also babel has been customised to target appropriate node version for serverless.
 
 for more refer
 
 -   [serverless](https://github.com/serverless/serverless)
 
 -   [nodify rollup customization](https://github.com/shrynx/nodify#rollup)
+
+-   [nodify babel customization](https://github.com/shrynx/nodify#babel)
+
