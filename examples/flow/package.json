@@ -3,7 +3,7 @@
   "scripts": {
     "flow": "flow",
     "dev": "nodify dev",
-    "build": "nodify build",
+    "build": "flow && nodify build",
     "start": "npm run build && node ./build/main"
   },
   "devDependencies": {
