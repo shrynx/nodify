@@ -10,6 +10,6 @@
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-preset-nodify": "^2.0.2",
     "flow-bin": "^0.58.0",
-    "nodify-core": "^2.0.1"
+    "nodify-core": "^2.0.2"
   }
 }

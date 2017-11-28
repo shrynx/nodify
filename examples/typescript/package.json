@@ -6,7 +6,7 @@
     "start": "npm run build && node ./build/main"
   },
   "devDependencies": {
-    "nodify-core": "^2.0.1",
+    "nodify-core": "^2.0.2",
     "rollup-plugin-typescript": "^0.8.1"
   }
 }
