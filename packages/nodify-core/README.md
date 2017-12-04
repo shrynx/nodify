@@ -97,6 +97,11 @@ module.exports = {
 };
 ```
 
+Checkout the example for
+[custom rollup config](https://github.com/shrynx/nodify/tree/master/examples/custom-rollup)
+
+**NOTE**: The default config for rollup can be found [here](https://github.com/shrynx/nodify/blob/master/packages/nodify-core/config/rollup.config.js).
+
 ### Babel
 
 To customize babel plugins and presets configuration, create a `.babelrc` file
@@ -122,9 +127,7 @@ Your `.babelrc` should look like
 ```
 
 Checkout the example for
-[custom rollup config](https://github.com/shrynx/nodify/tree/master/examples/custom-rollup)
-
-The default config for rollup can be found [here](https://github.com/shrynx/nodify/blob/master/packages/nodify-core/config/rollup.config.js).
+[custom babel config](https://github.com/shrynx/nodify/tree/master/examples/custom-babel)
 
 ## Built with
 
