@@ -6,6 +6,6 @@
     "start": "npm run build && node ./build/main"
   },
   "devDependencies": {
-    "nodify-core": "^2.0.2"
+    "nodify-core": "^3.0.0"
   }
 }

@@ -3,10 +3,11 @@
 const babel = require('rollup-plugin-babel');
 const json = require('rollup-plugin-json');
 const commonjs = require('rollup-plugin-commonjs');
+const replace = require('rollup-plugin-replace');
 const paths = require('./paths');
-const basePresets = require('./babel.js');
+const basePresets = require('../babel.js');
 
-const config = {
+const config = env => ({
   input: paths.srcPath,
   output: {
     file: paths.buildPath,
@@ -26,7 +27,8 @@ const config = {
       presets: basePresets,
     }),
     commonjs(),
+    replace({ 'process.env.NODE_ENV': JSON.stringify(env) }),
   ],
-};
+});
 
 module.exports = config;

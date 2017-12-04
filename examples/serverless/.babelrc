@@ -1,6 +1,6 @@
 {
   "presets": [
-    "nodify",
+    "nodify-core/babel",
     [
       "env",
       {

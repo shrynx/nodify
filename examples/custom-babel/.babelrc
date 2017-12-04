@@ -1,5 +1,6 @@
 {
   "presets": [
-    "nodify", "stage-0"
+    "nodify-core/babel", 
+    "stage-0"
   ]
 }

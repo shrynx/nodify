@@ -16,6 +16,8 @@ const startServer = require('./utils/startServer');
 const paths = require('../config/paths');
 const baseConfig = require('../config/rollup.config');
 
+const env = process.env.NODE_ENV || 'development';
+
 clearConsole();
 
 const isTTY = Boolean(process.stderr.isTTY);
@@ -36,8 +38,8 @@ function start() {
   }
 
   const coreConfig = customConfig.rollup
-    ? createConfig(customConfig.rollup(baseConfig))
-    : createConfig(baseConfig);
+    ? createConfig(customConfig.rollup(baseConfig(env), env))
+    : createConfig(baseConfig(env));
 
   const rollupConfig = Object.assign({}, coreConfig.inputOptions, {
     output: coreConfig.outputOptions,

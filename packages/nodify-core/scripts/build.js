@@ -12,6 +12,8 @@ const relativeId = require('./utils/relativeId');
 const clearConsole = require('./utils/clearConsole');
 const baseConfig = require('../config/rollup.config');
 
+const env = process.env.NODE_ENV || 'production';
+
 function build() {
   clearConsole();
   let customConfig = {};
@@ -22,8 +24,8 @@ function build() {
   }
 
   const coreConfig = customConfig.rollup
-    ? customConfig.rollup(baseConfig)
-    : baseConfig;
+    ? customConfig.rollup(baseConfig(env), env)
+    : baseConfig(env);
 
   const rollupConfig = createConfig(coreConfig);
 
