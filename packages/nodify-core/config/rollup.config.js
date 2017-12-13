@@ -12,13 +12,16 @@ const config = env => ({
   output: {
     file: paths.buildPath,
     format: 'cjs',
-    banner: `require('${require
-      .resolve('source-map-support')
-      .indexOf(process.cwd()) === 0
-      ? 'source-map-support/register'
-      : require.resolve('source-map-support/register')}')`,
+    banner:
+      env !== 'production'
+        ? `require('${require
+            .resolve('source-map-support')
+            .indexOf(process.cwd()) === 0
+            ? 'source-map-support/register'
+            : require.resolve('source-map-support/register')}')`
+        : '',
   },
-  sourcemap: true,
+  sourcemap: env !== 'production',
   plugins: [
     json(),
     babel({
