@@ -1,6 +1,6 @@
 {
   "name": "nodify-core",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Nodify is a build tool system for Node.js",
   "repository": {
     "type": "git",
@@ -27,10 +27,10 @@
     "babel-preset-nodify": "^2.0.2",
     "chalk": "^2.3.0",
     "cross-spawn": "^5.1.0",
-    "nodemon": "^1.12.1",
+    "nodemon": "^1.12.5",
     "pretty-ms": "^3.1.0",
     "ramda": "^0.25.0",
-    "rollup": "^0.52.0",
+    "rollup": "^0.52.1",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-json": "^2.3.0",
