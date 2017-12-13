@@ -42,8 +42,13 @@ Nodify is exposes two cli commands
 -   ### **nodify dev**
 
     Runs nodify in development mode. Allowing you to execute code and reload on
+
     change, also providing helpful errors.
     ![errors](https://user-images.githubusercontent.com/4706261/32256050-0fa77fa4-bef0-11e7-9326-e678cf7523ac.png)
+
+    **NOTE**: nodify dev automatically sets `process.env.node` to `development`, 
+
+    and generates source map to support debugging.
 
 -   ### **nodify build**
 
@@ -56,6 +61,11 @@ Nodify is exposes two cli commands
     ```shell
     node ./build/main
     ```
+
+    **NOTE**: nodify build automatically sets `process.env.node` to `production`, 
+
+    and doesn't generate any source maps.
+---
 
 Your `package.json` should look like
 
@@ -91,7 +101,9 @@ module.exports = {
     // access the config here
     // also process.env.NODE_ENV can be accessed using env
     // and customize it as you wish
-    // finally remember to return the modified config
+    // finally remember to return the modified config.
+    // by default during dev process.env.NODE_ENV is 'development'
+    // and during build process.env.NODE_ENV is 'production'
     return config;
   },
 };
