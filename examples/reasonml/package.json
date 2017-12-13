@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "bs-platform": "^2.0.0",
-    "nodify-core": "3.0.0",
+    "nodify-core": "^4.0.0",
     "rollup-plugin-bucklescript": "^0.6.1"
   }
 }
