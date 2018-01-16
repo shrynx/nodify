@@ -7,6 +7,6 @@
   },
   "devDependencies": {
     "babel-preset-stage-0": "^6.24.1",
-    "nodify-core": "^4.0.3"
+    "nodify-core": "^4.0.4"
   }
 }
