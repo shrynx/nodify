@@ -3,5 +3,6 @@
   "sources": ["src"],
   "package-specs": ["es6"],
   "bsc-flags": ["-bs-super-errors"],
+  "generate-merlin" : true,
   "refmt": 3
 }
