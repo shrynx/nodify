@@ -6,7 +6,8 @@
     "publish": "lerna publish -m 'chore(release): publish'",
     "format": "prettier-eslint --trailing-comma es5 --single-quote --write 'packages/*/*.js' 'packages/*/!(node_modules)/**/*.js' 'examples/*/!(node_modules)/**/*.js'",
     "precommit": "lint-staged",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "build:examples": "sh ./tasks/build-examples.sh"
   },
   "config": {
     "commitizen": {
