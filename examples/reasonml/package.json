@@ -6,8 +6,8 @@
     "start": "npm run build && node ./build/main"
   },
   "devDependencies": {
-    "bs-platform": "^2.0.0",
-    "nodify-core": "^4.0.5",
+    "bs-platform": "^2.2.2",
+    "nodify-core": "^4.0.6",
     "rollup-plugin-bucklescript": "^0.6.1"
   }
 }

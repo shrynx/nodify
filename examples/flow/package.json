@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "babel-plugin-transform-flow-strip-types": "^6.22.0",
-    "flow-bin": "^0.58.0",
-    "nodify-core": "^4.0.5"
+    "flow-bin": "^0.66.0",
+    "nodify-core": "^4.0.6"
   }
 }
