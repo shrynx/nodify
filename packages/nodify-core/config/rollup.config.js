@@ -14,18 +14,17 @@ const config = env => ({
     format: 'cjs',
     banner:
       env !== 'production'
-        ? `require('${require
-            .resolve('source-map-support')
-            .indexOf(process.cwd()) === 0
-            ? 'source-map-support/register'
-            : require.resolve('source-map-support/register')}')`
+        ? `require('${
+            require.resolve('source-map-support').indexOf(process.cwd()) === 0
+              ? 'source-map-support/register'
+              : require.resolve('source-map-support/register')
+          }')`
         : '',
   },
   sourcemap: env !== 'production',
   plugins: [
     json(),
     babel({
-      exclude: 'node_modules/**',
       babelrc: true,
       presets: basePresets,
     }),
